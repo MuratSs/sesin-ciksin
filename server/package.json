@@ -1,0 +1,14 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "sesin-çıksın-server",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Murat Mirgün Ercan",
+  "license": "ISC",
+  "dependencies": {
+    "http": "0.0.1-security"
+  }
+}
