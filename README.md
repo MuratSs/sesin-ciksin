@@ -1,6 +1,6 @@
 # Sesin Çıksın
 > Tek engel Korkuların!
-
+![Example screenshot](./img/ses.png)  
 ## Table of contents
 * [General info](#general-info)
 * [Screenshots](#screenshots)
@@ -16,7 +16,7 @@ TODO >>
 Add more general information about project. What the purpose of the project is? Motivation?
 
 ## Screenshots
-![Example screenshot](./img/ses.png)
+TODO>>
 
 ## Technologies
 TODO >>

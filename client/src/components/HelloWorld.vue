@@ -1,58 +1,213 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <div>
+
+<article class="card">
+  <header class="card__thumb">
+    <a href="#"></a>
+  </header>
+  <date class="card__date">
+    <span class="card__date__day">11</span>
+    <br/>
+    <span class="card__date__month">Juin</span>
+  </date>
+  
+  <div class="card__body">
+    <div class="card__category"><a href="#">Photos</a></div>
+    <h2 class="card__title"><a href="#">We're on a highway to hell!</a></h2>
+    <div class="card__subtitle">Bender is frying Doc !</div>
+    <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit cumque non commodi, modi recusandae cupiditate ipsa ab soluta. Illum, dolore.</p>
   </div>
+  
+  <footer class="card__footer">
+    <span class="icon ion-clock"></span> 6min ago
+    <span class="icon ion-chatbox"></span><a href="#"> 42 comments</a>
+   </footer>
+</article>
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+    
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
+/**
+* VARIABLES
+**/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+* {
+  box-sizing: border-box;
 }
-ul {
-  list-style-type: none;
+
+body {
+  font-family: "Open Sans";
+  font-size: 16px;
+  background-color: #eee;
+}
+
+/**
+* Title
+**/
+.title {
+  text-align: center;
+  transform: translateY(20px);
+  font-size: 45px;
+  color: coral;
+  text-transform: uppercase;
+}
+
+/**
+* CARD
+**/
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) translateZ(0);
+  width: 370px;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.5s;
+}
+.card a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card:hover {
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+/**
+* DATE
+**/
+.card__date {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 45px;
+  height: 45px;
+  padding-top: 10px;
+  background-color: coral;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  font-weight: 700;
+  line-height: 13px;
+}
+.card__date__day {
+  font-size: 14px;
+}
+.card__date__month {
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+/**
+* THUMB
+**/
+.card__thumb {
+  height: 245px;
+  overflow: hidden;
+  background-color: #000;
+  transition: height 0.5s;
+}
+.card__thumb img {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.card:hover .card__thumb {
+  height: 130px;
+}
+
+.card:hover .card__thumb img {
+  opacity: 0.6;
+  transform: scale(1.2);
+}
+
+/**
+* BODY
+**/
+.card__body {
+  position: relative;
+  height: 185px;
+  padding: 20px;
+  transition: height 0.5s;
+}
+.card:hover .card__body {
+  height: 300px;
+}
+
+.card__category {
+  position: absolute;
+  top: -25px;
+  left: 0;
+  height: 25px;
+  padding: 0 15px;
+  background-color: coral;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 11px;
+  line-height: 25px;
+}
+
+.card__title {
+  margin: 0;
+  padding: 0 0 10px 0;
+  color: #000;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.card__subtitle {
+  margin: 0;
+  padding: 0 0 10px 0;
+  font-size: 19px;
+  color: coral;
+}
+
+.card__description {
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 56px;
+  margin: 0;
   padding: 0;
+  color: #666C74;
+  line-height: 27px;
+  opacity: 0;
+  transform: translateY(45px);
+  transition: opacity 0.3s, transform 0.3s;
+  transition-delay: 0s;
 }
-li {
+.card:hover .card__description {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+}
+
+.card__footer {
+  position: absolute;
+  bottom: 12px;
+  left: 20px;
+  right: 20px;
+  font-size: 11px;
+  color: #A3A9A2;
+}
+
+.icon {
   display: inline-block;
-  margin: 0 10px;
+  vertical-align: middle;
+  margin: -2px 0 0 2px;
+  font-size: 18px;
 }
-a {
-  color: #42b983;
+.icon + .icon {
+  padding-left: 10px;
 }
 </style>
