@@ -1,213 +1,226 @@
 <template>
-    <div>
+  <div>
+  <div class="a"></div>
 
-<article class="card">
-  <header class="card__thumb">
-    <a href="#"></a>
-  </header>
-  <date class="card__date">
-    <span class="card__date__day">11</span>
-    <br/>
-    <span class="card__date__month">Juin</span>
-  </date>
-  
-  <div class="card__body">
-    <div class="card__category"><a href="#">Photos</a></div>
-    <h2 class="card__title"><a href="#">We're on a highway to hell!</a></h2>
-    <div class="card__subtitle">Bender is frying Doc !</div>
-    <p class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit cumque non commodi, modi recusandae cupiditate ipsa ab soluta. Illum, dolore.</p>
-  </div>
-  
-  <footer class="card__footer">
-    <span class="icon ion-clock"></span> 6min ago
-    <span class="icon ion-chatbox"></span><a href="#"> 42 comments</a>
-   </footer>
-</article>
+<main class="page-content">
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Nerden Çıktı Club House</h2>
+      <p class="copy">Ne yazssam bilemedim</p>
+      <button class="btn">Devamını gör</button>
     </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">BTC Uçtu</h2>
+      <p class="copy">Ne yazssam bilemedim</p>
+      <button class="btn">Devamını gör</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Desert Destinations</h2>
+      <p class="copy">Ne yazssam bilemedim</p>
+      <button class="btn">Devamını gör</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Explore The Galaxy</h2>
+      <p class="copy">Ne yazssam bilemedim</p>
+      <button class="btn">Devamını gör</button>
+    </div>
+  </div>
+</main>
+  </div>
 </template>
 
-<script>
-export default {
-    
-}
-</script>
-
 <style scoped>
-/**
-* VARIABLES
-**/
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+}
+
 * {
   box-sizing: border-box;
 }
 
+html, body {
+  height: 100%;
+}
+
 body {
-  font-family: "Open Sans";
-  font-size: 16px;
-  background-color: #eee;
+  display: grid;
+  place-items: center;
 }
 
-/**
-* Title
-**/
-.title {
-  text-align: center;
-  transform: translateY(20px);
-  font-size: 45px;
-  color: coral;
-  text-transform: uppercase;
+.page-content {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
 }
-
-/**
-* CARD
-**/
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.a {
+  width: 150px;
+}
 .card {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%) translateZ(0);
-  width: 370px;
-  background-color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: box-shadow 0.5s;
-}
-.card a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.card:hover {
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-}
-
-/**
-* DATE
-**/
-.card__date {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 45px;
-  height: 45px;
-  padding-top: 10px;
-  background-color: coral;
-  border-radius: 50%;
-  color: #fff;
-  text-align: center;
-  font-weight: 700;
-  line-height: 13px;
-}
-.card__date__day {
-  font-size: 14px;
-}
-.card__date__month {
-  text-transform: uppercase;
-  font-size: 10px;
-}
-
-/**
-* THUMB
-**/
-.card__thumb {
-  height: 245px;
-  overflow: hidden;
-  background-color: #000;
-  transition: height 0.5s;
-}
-.card__thumb img {
-  display: block;
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.5s, transform 0.5s;
-}
-.card:hover .card__thumb {
-  height: 130px;
-}
-
-.card:hover .card__thumb img {
-  opacity: 0.6;
-  transform: scale(1.2);
-}
-
-/**
-* BODY
-**/
-.card__body {
   position: relative;
-  height: 185px;
-  padding: 20px;
-  transition: height 0.5s;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
-.card:hover .card__body {
-  height: 300px;
+@media (min-width: 600px) {
+  .card {
+    height: 350px;
+  }
 }
-
-.card__category {
+.card:before {
+  content: "";
   position: absolute;
-  top: -25px;
+  top: 0;
   left: 0;
-  height: 25px;
-  padding: 0 15px;
-  background-color: coral;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 11px;
-  line-height: 25px;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.card:nth-child(1):before {
+  background-image: url(https://images.prismic.io/clubhouse/4e621f129f7af103c67b37c94172514de82e7265_y9msvsz6twewmksk3slzgg2x.png);
+}
+.card:nth-child(2):before {
+  background-image: url(https://i.sozcu.com.tr/wp-content/uploads/2020/11/18/iecrop/shutterstock_753414121_16_9_1604298876_16_9_1605685808.jpg);
+}
+.card:nth-child(3):before {
+  background-image: url(https://i.sozcu.com.tr/wp-content/uploads/2020/11/18/iecrop/shutterstock_753414121_16_9_1604298876_16_9_1605685808.jpg);
+}
+.card:nth-child(4):before {
+  background-image: url(https://i.sozcu.com.tr/wp-content/uploads/2020/11/18/iecrop/shutterstock_753414121_16_9_1604298876_16_9_1605685808.jpg);
 }
 
-.card__title {
-  margin: 0;
-  padding: 0 0 10px 0;
-  color: #000;
-  font-size: 22px;
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+.content > * + * {
+  margin-top: 1rem;
+}
+
+.title {
+  font-size: 1.3rem;
   font-weight: bold;
+  line-height: 1.2;
+}
+
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
   text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
+}
+.btn:hover {
+  background-color: #0d0d0d;
+}
+.btn:focus {
+  outline: 1px dashed yellow;
+  outline-offset: 3px;
 }
 
-.card__subtitle {
-  margin: 0;
-  padding: 0 0 10px 0;
-  font-size: 19px;
-  color: coral;
-}
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    transform: translateY(0);
+  }
 
-.card__description {
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 56px;
-  margin: 0;
-  padding: 0;
-  color: #666C74;
-  line-height: 27px;
-  opacity: 0;
-  transform: translateY(45px);
-  transition: opacity 0.3s, transform 0.3s;
-  transition-delay: 0s;
-}
-.card:hover .card__description {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.2s;
-}
+  .content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  .content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+  }
 
-.card__footer {
-  position: absolute;
-  bottom: 12px;
-  left: 20px;
-  right: 20px;
-  font-size: 11px;
-  color: #A3A9A2;
-}
+  .card:hover,
+.card:focus-within {
+    align-items: center;
+  }
+  .card:hover:before,
+.card:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .card:hover:after,
+.card:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .card:hover .content,
+.card:focus-within .content {
+    transform: translateY(0);
+  }
+  .card:hover .content > *:not(.title),
+.card:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
 
-.icon {
-  display: inline-block;
-  vertical-align: middle;
-  margin: -2px 0 0 2px;
-  font-size: 18px;
-}
-.icon + .icon {
-  padding-left: 10px;
+  .card:focus-within:before, .card:focus-within:after,
+.card:focus-within .content,
+.card:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
 }
 </style>
