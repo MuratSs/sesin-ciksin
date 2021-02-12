@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import Index from "./components/HelloWorld";
+import Index from "./components/Card";
 
 Vue.use(VueRouter);
 

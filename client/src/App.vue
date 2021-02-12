@@ -31,7 +31,10 @@
     <div>
     <router-view />
     </div>
-  </div>
+<div> 
+<div id='footer'></div>
+</div>
+</div>
 </template>
 <script></script>
 
@@ -203,5 +206,18 @@ h1 {
 		}
 	}
 }
-	
+
+/* Footer Style*/
+
+#footer {
+  position: fixed;
+  bottom: 0px;
+  margin:0 auto;
+  height: 50px;
+  width:100%;
+  background-image: linear-gradient(-135deg, transparent 50%, #6AC5F6 50%), linear-gradient(-45deg, #93D1F3 50%, transparent 50%);
+  background-size: 50px 50px;
+  z-index:-3;
+}
+
 </style>
