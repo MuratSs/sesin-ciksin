@@ -20,16 +20,20 @@ TODO>>
 
 ## Technologies
 TODO >>
-* Tech 1 - version 1.0
-* Tech 2 - version 2.0
+* VueJS
+* Golang
 * Tech 3 - version 3.0
 
 ## Setup
-Describe how to install / setup your local environement / add link to demo version.
-
-## Code Examples
-TODO >> Show examples of usage:
-`put-your-code-here`
+first go client directory and run
+```
+npm install
+```
+and 
+```
+npm run serve
+```
+have fun
 
 ## Features
 TODO >> List of features ready and TODOs for future development
