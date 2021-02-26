@@ -1,6 +1,6 @@
-module github.com/create-go-app/net_http-go-template
+module sesin-ciksin
 
-go 1.11
+go 1.15
 
 require (
 	github.com/gorilla/mux v1.8.0

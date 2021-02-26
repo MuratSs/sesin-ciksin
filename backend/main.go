@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/muratmirgun/sesin-ciksin/pkg/apiserver"
+	"github.com/muratmirgun/sesin-ciksin/backend/pkg/apiserver"
 )
 
 func main() {
