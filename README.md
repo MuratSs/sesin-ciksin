@@ -20,9 +20,9 @@ TODO>>
 
 ## Technologies
 TODO >>
-* VueJS
+* React
 * Golang
-* Tech 3 - version 3.0
+* Docker
 
 ## Setup
 first go client directory and run
@@ -31,7 +31,7 @@ npm install
 ```
 and 
 ```
-npm run serve
+npm start
 ```
 have fun
 
@@ -42,7 +42,7 @@ TODO >> List of features ready and TODOs for future development
 * Awesome feature 3
 
 TODO >> To-do list:
-* Wow improvement to be done 1
+* need main components and page designs
 * Wow improvement to be done 2
 
 ## Status
